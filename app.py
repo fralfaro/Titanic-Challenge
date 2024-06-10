@@ -129,8 +129,11 @@ class BodyText:
 class ImagesURL:
     titanic = "https://raw.githubusercontent.com/fralfaro/posit-tables-2024/main/images/titanic.png"
 class DataURL:
-    titanic_train = "https://raw.githubusercontent.com/fralfaro/ploomber-example/main/data/train.csv"
-    titanic_test = "https://raw.githubusercontent.com/fralfaro/ploomber-example/main/data/test.csv"
+    titanic_train = "https://raw.githubusercontent.com/fralfaro/Titanic-Challenge/main/data/raw/train.csv"
+    predictions = "https://raw.githubusercontent.com/fralfaro/Titanic-Challenge/main/data/final/predictions.csv"
+    feature_importance = "https://raw.githubusercontent.com/fralfaro/Titanic-Challenge/main/data/final/feature_importance_df.csv"
+    models_metrics = "https://raw.githubusercontent.com/fralfaro/Titanic-Challenge/main/data/final/models_metrics.csv"
+
 
 # extra functions
 
@@ -635,6 +638,16 @@ def cs_body():
     with tab3:
 
         st.markdown(BodyText.mle_intro, unsafe_allow_html=True)
+
+        st.subheader("Apply Machine Learning Models")
+        metrics = pd.read_csv(DataURL.models_metrics)
+
+        interactive_table(
+            metrics,
+            buttons=["copyHtml5", "csvHtml5", "excelHtml5"],
+            maxBytes=0
+        )
+
 
     css = '''
     <style>
