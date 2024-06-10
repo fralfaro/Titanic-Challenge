@@ -23,7 +23,7 @@ def plot_histogram(data, column, figsize=(8, 4)):
     plt.figure(figsize=figsize)
 
     # Create the histogram using Seaborn
-    sns.histplot(data[column].dropna(), bins=20, color='#bce4b5', edgecolor='black')
+    sns.histplot(data[column].dropna(), bins=20, color='steelblue', edgecolor='black')
 
     # Add title and axis labels
     plt.title(f'Distribution of column {column}')
@@ -58,7 +58,7 @@ def plot_histogram_vo(data, column, vo, figsize=(8, 4)):
     plt.figure(figsize=figsize)
 
     # Create histograms using Seaborn
-    sns.histplot(x=column, hue=vo, data=data, palette='Greens', edgecolor='black')
+    sns.histplot(x=column, hue=vo, data=data, palette='Blues', edgecolor='black')
 
     # Add title and axis labels
     plt.title(f'Distribution of column {column}')
@@ -97,7 +97,7 @@ def plot_range_distribution(data, column, bins, figsize=(8, 4)):
 
     # Create the bar chart
     plt.figure(figsize=figsize)
-    sns.barplot(x=temp_percentages.index, y=temp_percentages.values, color='#bce4b5', edgecolor='black')
+    sns.barplot(x=temp_percentages.index, y=temp_percentages.values, color='steelblue', edgecolor='black')
 
     # Add value annotations on the bars (percentages)
     for i, value in enumerate(temp_percentages):
@@ -146,7 +146,7 @@ def plot_range_distribution_vo(data, column, bins, vo, figsize=(8, 4)):
 
     # Bar chart with Seaborn
     plt.figure(figsize=figsize)
-    ax = sns.barplot(data=counts, x=column + 'Range', y='Percentage', hue=vo, palette='Greens', edgecolor='black')
+    ax = sns.barplot(data=counts, x=column + 'Range', y='Percentage', hue=vo, palette='Blues', edgecolor='black')
 
     # Rotate the x-axis labels (45 degrees) and add values on each bar (excluding 0%)
     for p in ax.patches:
@@ -188,7 +188,7 @@ def plot_barplot(data, column, figsize=(8, 4)):
 
     # Create the bar chart with percentages
     plt.figure(figsize=figsize)
-    temp_percentages.plot(kind='bar', color='#bce4b5', edgecolor='black')
+    temp_percentages.plot(kind='bar', color='steelblue', edgecolor='black')
 
     # Add value annotations on the bars (percentages)
     for i, value in enumerate(temp_percentages):
@@ -227,7 +227,7 @@ def plot_barplot_vo(data, column, vo, figsize=(8, 4)):
 
     # Bar chart with Seaborn
     plt.figure(figsize=figsize)
-    ax = sns.barplot(data=counts, x=column, y='Percentage', hue=vo, palette='Greens', edgecolor='black')
+    ax = sns.barplot(data=counts, x=column, y='Percentage', hue=vo, palette='Blues', edgecolor='black')
 
     # Rotate the x-axis labels (45 degrees) and add values on each bar (excluding 0%)
     for p in ax.patches:
