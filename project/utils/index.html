@@ -1116,7 +1116,7 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 <!-- End of mermaid configuration --><div class="jupyter-wrapper">
 <div class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=3ce9934d">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a8f4a6ae">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1147,7 +1147,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8aa809f8">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=da17d90d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1185,7 +1185,7 @@ import seaborn as sns</div>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
 
     <span class="c1"># Create the histogram using Seaborn</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#bce4b5'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">(),</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'steelblue'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
 
     <span class="c1"># Add title and axis labels</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Distribution of column </span><span class="si">{</span><span class="n">column</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
@@ -1218,7 +1218,7 @@ import seaborn as sns</div>
     plt.figure(figsize=figsize)
 
     # Create the histogram using Seaborn
-    sns.histplot(data[column].dropna(), bins=20, color='#bce4b5', edgecolor='black')
+    sns.histplot(data[column].dropna(), bins=20, color='steelblue', edgecolor='black')
 
     # Add title and axis labels
     plt.title(f'Distribution of column {column}')
@@ -1236,7 +1236,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=05ed6bd6">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f7b6b830">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1276,7 +1276,7 @@ import seaborn as sns</div>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
 
     <span class="c1"># Create histograms using Seaborn</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">column</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">vo</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">'Greens'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">column</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">vo</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">'Blues'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
 
     <span class="c1"># Add title and axis labels</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Distribution of column </span><span class="si">{</span><span class="n">column</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
@@ -1308,7 +1308,7 @@ import seaborn as sns</div>
     plt.figure(figsize=figsize)
 
     # Create histograms using Seaborn
-    sns.histplot(x=column, hue=vo, data=data, palette='Greens', edgecolor='black')
+    sns.histplot(x=column, hue=vo, data=data, palette='Blues', edgecolor='black')
 
     # Add title and axis labels
     plt.title(f'Distribution of column {column}')
@@ -1323,7 +1323,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=31d2d172">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e88b8052">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1370,7 +1370,7 @@ import seaborn as sns</div>
 
     <span class="c1"># Create the bar chart</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
-    <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">temp_percentages</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">temp_percentages</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#bce4b5'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
+    <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">temp_percentages</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">temp_percentages</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'steelblue'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
 
     <span class="c1"># Add value annotations on the bars (percentages)</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">temp_percentages</span><span class="p">):</span>
@@ -1418,7 +1418,7 @@ import seaborn as sns</div>
 
     # Create the bar chart
     plt.figure(figsize=figsize)
-    sns.barplot(x=temp_percentages.index, y=temp_percentages.values, color='#bce4b5', edgecolor='black')
+    sns.barplot(x=temp_percentages.index, y=temp_percentages.values, color='steelblue', edgecolor='black')
 
     # Add value annotations on the bars (percentages)
     for i, value in enumerate(temp_percentages):
@@ -1442,7 +1442,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0a5bdd60">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=bb637666">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1490,7 +1490,7 @@ import seaborn as sns</div>
 
     <span class="c1"># Bar chart with Seaborn</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">column</span> <span class="o">+</span> <span class="s1">'Range'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Percentage'</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">vo</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">'Greens'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">column</span> <span class="o">+</span> <span class="s1">'Range'</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Percentage'</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">vo</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">'Blues'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
 
     <span class="c1"># Rotate the x-axis labels (45 degrees) and add values on each bar (excluding 0%)</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
@@ -1541,7 +1541,7 @@ import seaborn as sns</div>
 
     # Bar chart with Seaborn
     plt.figure(figsize=figsize)
-    ax = sns.barplot(data=counts, x=column + 'Range', y='Percentage', hue=vo, palette='Greens', edgecolor='black')
+    ax = sns.barplot(data=counts, x=column + 'Range', y='Percentage', hue=vo, palette='Blues', edgecolor='black')
 
     # Rotate the x-axis labels (45 degrees) and add values on each bar (excluding 0%)
     for p in ax.patches:
@@ -1567,7 +1567,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=254f1097">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=f99f5fca">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1606,7 +1606,7 @@ import seaborn as sns</div>
 
     <span class="c1"># Create the bar chart with percentages</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
-    <span class="n">temp_percentages</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'#bce4b5'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
+    <span class="n">temp_percentages</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">'bar'</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'steelblue'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
 
     <span class="c1"># Add value annotations on the bars (percentages)</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">temp_percentages</span><span class="p">):</span>
@@ -1641,7 +1641,7 @@ import seaborn as sns</div>
 
     # Create the bar chart with percentages
     plt.figure(figsize=figsize)
-    temp_percentages.plot(kind='bar', color='#bce4b5', edgecolor='black')
+    temp_percentages.plot(kind='bar', color='steelblue', edgecolor='black')
 
     # Add value annotations on the bars (percentages)
     for i, value in enumerate(temp_percentages):
@@ -1660,7 +1660,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2f386314">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0affb1f5">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1703,7 +1703,7 @@ import seaborn as sns</div>
 
     <span class="c1"># Bar chart with Seaborn</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">)</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">column</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Percentage'</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">vo</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">'Greens'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">counts</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="n">column</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">'Percentage'</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">vo</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="s1">'Blues'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">)</span>
 
     <span class="c1"># Rotate the x-axis labels (45 degrees) and add values on each bar (excluding 0%)</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">ax</span><span class="o">.</span><span class="n">patches</span><span class="p">:</span>
@@ -1746,7 +1746,7 @@ import seaborn as sns</div>
 
     # Bar chart with Seaborn
     plt.figure(figsize=figsize)
-    ax = sns.barplot(data=counts, x=column, y='Percentage', hue=vo, palette='Greens', edgecolor='black')
+    ax = sns.barplot(data=counts, x=column, y='Percentage', hue=vo, palette='Blues', edgecolor='black')
 
     # Rotate the x-axis labels (45 degrees) and add values on each bar (excluding 0%)
     for p in ax.patches:
@@ -1769,7 +1769,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=deffdd80">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a8abfdd4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1846,7 +1846,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fd8a0c18">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=85fa7802">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -1933,7 +1933,7 @@ import seaborn as sns</div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e4034527">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=438b3170">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
