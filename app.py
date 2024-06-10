@@ -113,7 +113,7 @@ class BodyText:
 
     **Model Insights:**
 
-    1. **Random Forest:** Achieved a high AUC of 0.886, indicating excellent discrimination between classes, with a good balance of precision and recall.
+    1. **Random Forest:** Achieved a high AUC of 0.887, indicating excellent discrimination between classes, with a good balance of precision and recall.
     2. **Logistic Regression:** Performed similarly to Random Forest with high accuracy and a strong F1-Score, but slightly lower AUC.
     3. **KNN:** Showed the highest accuracy and a strong F1-Score, but with a marginally lower AUC compared to Random Forest and Logistic Regression.
     4. **LGBM:** Performed well but with a slightly lower accuracy and AUC than Random Forest, Logistic Regression, and KNN.
@@ -124,6 +124,29 @@ class BodyText:
     **Conclusion:**
 
     Among the models evaluated, the Random Forest, Logistic Regression, and KNN classifiers showed the best overall performance, with high accuracy, precision, recall, F1-Score, and AUC values. Random Forest had the highest AUC, making it the best model for distinguishing between classes. Logistic Regression and KNN also performed well, with KNN achieving the highest accuracy. The time metric indicates that Logistic Regression is the fastest to train and evaluate, followed by KNN, making them efficient choices for quick model training. GaussianNB showed the poorest performance, highlighting its unsuitability for this specific classification task.
+    """
+
+    mle_best_model = """
+    In this section, we will focus on leveraging the best-performing machine learning model identified during our evaluation phase. 
+    
+    Based on our performance metrics, the Random Forest classifier demonstrated superior results with the highest AUC and a strong balance of precision
+    and recall. We will now utilize this model to make predictions on new data and explore its potential applications. 
+     
+    This includes deploying the model, interpreting its predictions, and assessing its real-world impact. By harnessing the power of the best model, 
+    we aim to achieve accurate and actionable insights from the Titanic dataset.
+    """
+    mle_conclusion = """
+    Throughout the machine learning phase of our Titanic dataset analysis, we successfully built and evaluated several predictive models to determine passenger survival. The process involved several critical steps:
+
+    1. **Data Preprocessing:** We prepared the data by handling missing values, encoding categorical variables, and scaling numerical features. This ensured that our data was clean and suitable for model training.
+    2. **Model Selection and Training:** We experimented with various machine learning algorithms, including Random Forest, Logistic Regression, K-Nearest Neighbors (KNN), LightGBM, AdaBoost, Decision Tree, and Gaussian Naive Bayes. Each model was trained using optimized hyperparameters to enhance performance.
+    3. **Evaluation Metrics:** We evaluated the models based on key metrics such as Accuracy, Precision, Recall, F1-Score, and AUC (Area Under the ROC Curve). This comprehensive evaluation allowed us to identify the strengths and weaknesses of each model.
+    4. **Best Model Identification:** Among the models, the Random Forest classifier emerged as the best-performing model with the highest AUC and a strong balance of precision and recall. This model demonstrated superior ability to distinguish between passengers who survived and those who did not.
+    5. **Feature Importance:** Using the Random Forest model, we identified the most important features contributing to the prediction of survival. This insight helps in understanding the factors that significantly influenced the survival chances of passengers.
+    6. **Predictions:** We utilized the best-performing model to make predictions on the test dataset, providing an actionable outcome based on our analysis.
+    7. **Results Documentation:** Finally, we saved the prediction results and the evaluation metrics of all models. This documentation ensures reproducibility and allows for further analysis and refinement.
+    
+    Overall, the machine learning phase has provided us with valuable predictive insights and a robust model for assessing passenger survival on the Titanic. The comprehensive approach, from data preprocessing to model evaluation and deployment, underscores the importance of methodical and thorough analysis in achieving accurate and meaningful results.
     """
 
 class ImagesURL:
@@ -531,6 +554,45 @@ def plot_roc_curve(y_true, y_score):
     )
     return fig
 
+def plot_feature_importance(feature_importance_df):
+    """
+    Plot the top 10 feature importances using Plotly and display it in Streamlit.
+
+    Parameters:
+    feature_importance_df (pd.DataFrame): DataFrame containing features and their importance.
+    """
+    # Sort the dataframe by importance
+    feature_importance_df = feature_importance_df.sort_values(by='Importance', ascending=False)
+
+    # Plot using Plotly
+    fig = px.bar(
+        feature_importance_df.head(10),
+        x='Importance',
+        y='Feature',
+        orientation='h',
+        title='Top 10 Feature Importance',
+        labels={'Importance': 'Importance', 'Feature': 'Feature'},
+        text='Importance'
+    )
+
+    fig.update_traces(marker_color='skyblue', texttemplate='%{text:.2f}', textposition='outside')
+    fig.update_layout(
+        xaxis_title='Importance',
+        yaxis_title='Feature',
+        yaxis=dict(autorange='reversed'),  # Invert the y-axis so the most important features are at the top
+        title={
+            'text': 'Top 10 Feature Importance',
+            'y':0.9,
+            'x':0.5,
+            'xanchor': 'center',
+            'yanchor': 'top'
+        }
+    )
+
+    # Display the plot in Streamlit
+    st.plotly_chart(fig)
+
+
 
 # Define the cs_sidebar() function
 def cs_sidebar():
@@ -614,7 +676,6 @@ def cs_body():
         # categorical variables
         plot_categorical_variables(df)
 
-
     with tab2:
         st.markdown(BodyText.fe_intro, unsafe_allow_html=True)
 
@@ -647,6 +708,32 @@ def cs_body():
             buttons=["copyHtml5", "csvHtml5", "excelHtml5"],
             maxBytes=0
         )
+
+        st.markdown(BodyText.mle_models, unsafe_allow_html=True)
+
+        st.subheader("Utilizing the Best Model")
+        st.markdown(BodyText.mle_best_model, unsafe_allow_html=True)
+
+        feature_importance = pd.read_csv(DataURL.feature_importance)
+        plot_feature_importance(feature_importance)
+
+        st.subheader("Make Predictions")
+        predictions = pd.read_csv(DataURL.predictions)
+        interactive_table(
+            predictions,
+            buttons=["copyHtml5", "csvHtml5", "excelHtml5"],
+            maxBytes=0
+        )
+
+        st.subheader("Conclusion")
+        st.markdown(BodyText.mle_conclusion, unsafe_allow_html=True)
+
+
+
+
+
+
+
 
 
     css = '''
