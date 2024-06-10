@@ -612,7 +612,7 @@ def cs_sidebar():
     st.sidebar.header("Titanic - ML from Disaster")
     st.sidebar.markdown("""
     [![documentation](https://img.shields.io/badge/📖-docs-brightgreen)](https://fralfaro.github.io/Titanic-Challenge/)
-    [![documentation](https://img.shields.io/badge/🌎-blog-blue)](https://fralfaro.github.io/Titanic-Challenge/)
+    [![documentation](https://img.shields.io/badge/🌎-blog-blue)](https://fralfaro.github.io/blog/posts/2024/titanic.html)
     """)
 
     st.sidebar.markdown(SidebarText.introduction,unsafe_allow_html=True)
