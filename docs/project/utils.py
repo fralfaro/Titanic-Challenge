@@ -268,6 +268,8 @@ def calculate_percentage_vo_int(data, column, vo):
     # Create a pivot table with the percentages
     pivot_counts = counts.pivot_table(values=['Count', 'Percentage'], index=column, columns=vo)
 
+
+
     return pivot_counts
 
 def calculate_percentage_vo(data, column, bins, vo):
