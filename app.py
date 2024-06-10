@@ -25,7 +25,7 @@ st.set_page_config(
 # extra classes
 class SidebarText:
     introduction = """
-        <small>The [RMS Titanic](https://es.wikipedia.org/wiki/RMS_Titanic)
+        <small> The [RMS Titanic](https://es.wikipedia.org/wiki/RMS_Titanic) 
         as a British passenger
         liner that tragically sank in the North Atlantic
         Ocean on April 15, 1912, during its maiden voyage
@@ -42,7 +42,90 @@ class SidebarText:
         """
 
 class BodyText:
-    pass
+    eda_intro = """
+    The Titanic dataset is one of the most well-known datasets in the field of data science and machine learning. It contains detailed information about the passengers aboard the Titanic, a British passenger liner that tragically sank in the North Atlantic Ocean on April 15, 1912, after hitting an iceberg. This disaster resulted in the loss of over 1,500 lives and has since become a poignant example of maritime tragedy.
+
+    Exploratory Data Analysis (EDA) is a crucial step in any data analysis project. It involves examining the dataset to uncover underlying patterns, spot anomalies, test hypotheses, and check assumptions through summary statistics and graphical representations. For the Titanic dataset, EDA helps us understand the factors that influenced survival rates, such as passenger demographics, socio-economic status, and travel details.
+
+    The dataset comprises variables such as passenger age, gender, ticket class, fare paid, and whether or not the passenger survived. By analyzing these variables, we can gain insights into which groups of passengers were more likely to survive and the reasons behind these trends. For instance, we might explore questions like:
+
+    - Did gender play a significant role in survival rates?
+    - Were first-class passengers more likely to survive than those in lower classes?
+    - How did the age of passengers affect their chances of survival?
+
+    Through various visualizations and statistical analyses, EDA provides a foundation for more complex modeling and predictive analysis. It allows us to clean and preprocess the data, handle missing values, and create new features that might improve the performance of machine learning models.
+    """
+    fe_intro = """
+    Feature engineering is a crucial step in the data preprocessing pipeline, aimed at enhancing the predictive power of machine learning models. For the Titanic dataset, this involves creating new features and modifying existing ones to better capture the underlying patterns that influence passenger survival.
+
+    The Titanic dataset includes various columns such as 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', and 'Embarked'. Each of these features holds potential insights into the survival outcomes, but they often require transformation and enrichment to become more effective for predictive modeling.
+
+    Feature engineering is an iterative process that involves experimenting with different transformations and evaluating their impact on model performance. By carefully crafting and selecting features, we can significantly improve the accuracy and robustness of predictive models for the Titanic dataset.
+    """
+    fe_conclusion = """
+    In our feature engineering process for the Titanic dataset, we undertook several steps to prepare the data for effective modeling:
+
+    1. **Removal of Non-Contributory Columns:** We removed the 'Name' and 'Ticket' columns, as they did not provide significant predictive value for our model.
+    2. **Handling Missing Values:**
+       - For the 'Age' column, missing values were filled with the mean age to maintain consistency and avoid data loss.
+       - For the 'Cabin' column, missing values were replaced with the most frequent value ('N'), and only the first letter of the cabin was retained to simplify the data.
+    3. **Data Type Conversion:** The columns 'Pclass', 'SibSp', and 'Parch' were converted from numerical to string type to better capture categorical relationships.
+    4. **Data Saving:** The processed training and test datasets were saved for future modeling and analysis.
+
+    These feature engineering steps have improved the quality and usability of the dataset, ensuring that it is well-prepared for subsequent analysis and machine learning tasks. By addressing missing values, simplifying categorical data, and removing unnecessary columns, we have created a more robust and interpretable dataset for predicting passenger survival on the Titanic.
+    """
+    mle_intro = """
+    The Titanic dataset is a popular and classic dataset used for introducing machine learning concepts and techniques. This dataset contains information about the passengers aboard the Titanic, including features such as age, gender, ticket class, and whether or not they survived the disaster. The primary objective is to build a predictive model that can accurately classify whether a passenger survived or not based on these features.
+
+    Machine learning offers a range of algorithms that can be applied to this classification problem. These algorithms can be broadly categorized into supervised learning techniques, where the model is trained on a labeled dataset. For the Titanic dataset, this means using the known outcomes (survived or not) to train the model.
+
+    Key steps in applying machine learning to the Titanic dataset include:
+
+    1. **Data Preprocessing:** This involves cleaning the data, handling missing values, and performing feature engineering to create relevant features that will improve the model's performance. The preprocessing steps ensure that the data is in a suitable format for training.
+    2. **Splitting the Data:** The dataset is typically split into a training set and a test set. The training set is used to train the model, while the test set is used to evaluate its performance.
+    3. **Selecting and Training Models:** Various machine learning algorithms can be applied to the Titanic dataset, including:
+       - **Logistic Regression:** A simple and interpretable algorithm suitable for binary classification problems.
+       - **Decision Trees:** A non-linear model that captures complex interactions between features.
+       - **Random Forests:** An ensemble method that builds multiple decision trees and combines their predictions for improved accuracy.
+       - **Support Vector Machines (SVM):** A powerful classifier that can find the optimal boundary between classes.
+       - **Gradient Boosting:** An ensemble technique that builds models sequentially to correct errors made by previous models.
+
+    4. **Model Evaluation:** The performance of the models is evaluated using metrics such as accuracy, precision, recall, and the F1 score. Cross-validation techniques can also be employed to ensure the model's robustness and to prevent overfitting.
+    5. **Hyperparameter Tuning:** This involves optimizing the parameters of the chosen algorithms to improve their performance. Techniques like grid search or random search can be used for this purpose.
+    6. **Making Predictions:** Once the model is trained and evaluated, it can be used to make predictions on new, unseen data. In the case of the Titanic dataset, this would involve predicting the survival of passengers based on their features.
+
+    By applying machine learning techniques to the Titanic dataset, we can gain valuable insights into the factors that influenced survival and develop predictive models that can be used for similar classification tasks in other domains. The process also provides a practical introduction to key machine learning concepts and methods.
+    """
+    mle_models = """
+    **Model Performance Evaluation Results**
+
+    The table below presents the performance metrics for various machine learning models applied to the Titanic dataset. The metrics include Accuracy, Precision, Recall, F1-Score, AUC (Area Under the ROC Curve), and the Time taken for training and evaluation. Each metric provides insights into different aspects of model performance.
+
+
+    **Explanation of Metrics:**
+
+    - **Accuracy:** The proportion of correctly classified instances among the total instances. A higher value indicates better overall performance.
+    - **Precision:** The proportion of true positive predictions among all positive predictions. It reflects the model's ability to avoid false positives.
+    - **Recall:** The proportion of true positive predictions among all actual positives. It indicates the model's ability to capture all relevant instances (sensitivity).
+    - **F1-Score:** The harmonic mean of precision and recall, providing a balance between the two. It is particularly useful when the class distribution is imbalanced.
+    - **AUC (Area Under the ROC Curve):** Measures the model's ability to distinguish between classes. A higher AUC value indicates better performance.
+    - **Time:** The time taken to train and evaluate the model.
+
+    **Model Insights:**
+
+    1. **Random Forest:** Achieved a high AUC of 0.886, indicating excellent discrimination between classes, with a good balance of precision and recall.
+    2. **Logistic Regression:** Performed similarly to Random Forest with high accuracy and a strong F1-Score, but slightly lower AUC.
+    3. **KNN:** Showed the highest accuracy and a strong F1-Score, but with a marginally lower AUC compared to Random Forest and Logistic Regression.
+    4. **LGBM:** Performed well but with a slightly lower accuracy and AUC than Random Forest, Logistic Regression, and KNN.
+    5. **AdaBoost:** Had decent performance but was slightly less effective in terms of precision and AUC compared to the top models.
+    6. **Decision Tree:** Demonstrated good precision and recall but with a significantly lower AUC.
+    7. **GaussianNB:** Had the lowest performance metrics, indicating poor model performance, especially with a very high recall but low precision and AUC.
+
+    **Conclusion:**
+
+    Among the models evaluated, the Random Forest, Logistic Regression, and KNN classifiers showed the best overall performance, with high accuracy, precision, recall, F1-Score, and AUC values. Random Forest had the highest AUC, making it the best model for distinguishing between classes. Logistic Regression and KNN also performed well, with KNN achieving the highest accuracy. The time metric indicates that Logistic Regression is the fastest to train and evaluate, followed by KNN, making them efficient choices for quick model training. GaussianNB showed the poorest performance, highlighting its unsuitability for this specific classification task.
+    """
+
 class ImagesURL:
     titanic = "https://raw.githubusercontent.com/fralfaro/posit-tables-2024/main/images/titanic.png"
 class DataURL:
@@ -205,7 +288,6 @@ def plot_numeric_variables(df):
         st.html(gt_table.as_raw_html())
 
 
-
 def plot_categorical_variables(df):
     st.markdown("""<big>Categorical Variables </big>""", unsafe_allow_html=True)
     col1, col2, col3, col4 = st.columns(4)
@@ -338,6 +420,33 @@ def plot_categorical_variables(df):
         st.html(gt_table.as_raw_html())
 
 
+def preprocess_titanic_data(df):
+    """
+    Preprocess the Titanic dataset.
+
+    Parameters:
+    df (pd.DataFrame): The input dataframe.
+
+    Returns:
+    pd.DataFrame: The preprocessed dataframe.
+    """
+    # Drop columns
+    cols_delete = ['Name', 'Ticket']
+    df = df.drop(cols_delete, axis=1)
+
+    # Fill missing values in 'Age' with the mean
+    age_mean = round(df['Age'].mean())
+    df['Age'] = df['Age'].fillna(age_mean)
+
+    # Fill missing values in 'Cabin' with 'N' and keep only the first letter
+    df['Cabin'] = df['Cabin'].fillna('N').str[0]
+
+    # Convert specified columns to string type
+    columns_to_convert = ['Pclass', 'SibSp', 'Parch']
+    df[columns_to_convert] = df[columns_to_convert].astype(str)
+
+    return df
+
 # Define img_to_bytes() function
 def img_to_bytes(img_url):
     response = requests.get(img_url)
@@ -436,6 +545,11 @@ def cs_sidebar():
     )
 
     st.sidebar.header("Titanic - ML from Disaster")
+    st.sidebar.markdown("""
+    [![documentation](https://img.shields.io/badge/📖-docs-brightgreen)](https://fralfaro.github.io/Titanic-Challenge/)
+    [![documentation](https://img.shields.io/badge/🌎-blog-blue)](https://fralfaro.github.io/Titanic-Challenge/)
+    """)
+
     st.sidebar.markdown(SidebarText.introduction,unsafe_allow_html=True)
 
     st.sidebar.markdown("__🛳️Goals__")
@@ -468,45 +582,69 @@ def cs_body():
     # Title of the application
     st.title("Titanic EDA with Streamlit and Plotly")
 
+    # Tab menu.
+    tab1, tab2, tab3 = st.tabs(
+        ["📊 Exploratory Data Analysis", "📝 Feature Engineering", "🤖 Machine Learning"]
+    )
+
     # Load Data: train.csv
     df = load_data()
 
-    #col1, col2, col3, col4 = st.columns(4)
-    interactive_table(
-        df,
-        buttons=["copyHtml5", "csvHtml5", "excelHtml5"],
-        maxBytes = 0
-    )
 
 
-    # Create a selectbox widget to choose between 'head' and 'tail'
-    #option = col1.selectbox("Select 'head' or 'tail'", options=["head", "tail"])
-    # Create a number_input widget to select the number of rows
-    #num_rows = col2.slider(
-    #    "Number of rows to display", min_value=1, max_value=50, value=5
-    #)
-    # Function to display the DataFrame according to the selected option
-    #def display_dataframe(option, num_rows):
-    #    if option == "head":
-    #        st.write(df.head(num_rows))
-    #    elif option == "tail":
-    #        st.write(df.tail(num_rows))
+    with tab1:
+        st.markdown(BodyText.eda_intro, unsafe_allow_html=True)
+
+        st.subheader("Data")
+        interactive_table(
+            df,
+            buttons=["copyHtml5", "csvHtml5", "excelHtml5"],
+            maxBytes = 0
+        )
 
 
+        st.subheader("Plots")
 
-    # Display the DataFrame based on the selected option
-    #display_dataframe(option, num_rows)
+        # numerical variables
+        plot_numeric_variables(df)
 
-    st.subheader("Plots")
+        # categorical variables
+        plot_categorical_variables(df)
 
-    # numerical variables
-    plot_numeric_variables(df)
 
-    # categorical variables
-    plot_categorical_variables(df)
+    with tab2:
+        st.markdown(BodyText.fe_intro, unsafe_allow_html=True)
 
-    st.subheader("Models and Metrics")
+        # Crear dos columnas
+        col1, col2 = st.columns(2)
 
+        new_df = preprocess_titanic_data(df)
+
+        # Botón en la primera columna
+        with col1:
+            st.subheader('Before')
+            st.write(df)
+
+        # Botón en la segunda columna
+        with col2:
+            st.subheader('After')
+            st.write(new_df)
+
+        st.markdown(BodyText.fe_conclusion, unsafe_allow_html=True)
+
+    with tab3:
+
+        st.markdown(BodyText.mle_intro, unsafe_allow_html=True)
+
+    css = '''
+    <style>
+        .stTabs [data-baseweb="tab-list"] button [data-testid="stMarkdownContainer"] p {
+        font-size:1.5rem;
+        }
+    </style>
+    '''
+
+    st.markdown(css, unsafe_allow_html=True)
 
 
 
