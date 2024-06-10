@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-mkdocs-material = "^8.2.15"
-neoteroi-mkdocs = "^1.0.4"
-mkdocs-dracula-theme = "^1.0.5"
+mkdocs-material = "*"
+neoteroi-mkdocs = "*"
+mkdocs-dracula-theme = "*"
+mkdocs-jupyter = "*"
