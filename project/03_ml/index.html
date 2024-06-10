@@ -1625,7 +1625,7 @@ object_columns = [x for x in list(train.select_dtypes(include=['object']).column
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-green-fg">2024-06-09 20:11:17.992</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Read Data</span>
+<pre><span class="ansi-green-fg">2024-06-09 22:37:08.671</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Read Data</span>
 </pre>
 </div>
 </div>
@@ -1773,7 +1773,7 @@ transformed_test_df = pd.DataFrame(X_test_processed.toarray(), columns=numeric_f
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-green-fg">2024-06-09 20:11:18.024</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Split the dataset into training and testing sets</span>
+<pre><span class="ansi-green-fg">2024-06-09 22:37:08.698</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Split the dataset into training and testing sets</span>
 </pre>
 </div>
 </div>
@@ -1940,7 +1940,7 @@ results_df = train_and_evaluate_all_models(models, transformed_train_df, y_train
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-green-fg">2024-06-09 20:11:18.067</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">2</span> - <span class="ansi-bold">Train and evaluate all models</span>
+<pre><span class="ansi-green-fg">2024-06-09 22:37:08.743</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">2</span> - <span class="ansi-bold">Train and evaluate all models</span>
 </pre>
 </div>
 </div>
@@ -1948,7 +1948,7 @@ results_df = train_and_evaluate_all_models(models, transformed_train_df, y_train
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>[LightGBM] [Info] Number of positive: 268, number of negative: 444
-[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000384 seconds.
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000512 seconds.
 You can set `force_row_wise=true` to remove the overhead.
 And if memory is not enough, you can set `force_col_wise=true`.
 [LightGBM] [Info] Total Bins 208
@@ -2092,7 +2092,7 @@ results_df.sort_values('AUC', ascending=False)</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-green-fg">2024-06-09 20:11:18.474</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">2</span> - <span class="ansi-bold">Sort the results by the AUC metric</span>
+<pre><span class="ansi-green-fg">2024-06-09 22:37:09.135</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">2</span> - <span class="ansi-bold">Sort the results by the AUC metric</span>
 </pre>
 </div>
 </div>
@@ -2133,7 +2133,7 @@ results_df.sort_values('AUC', ascending=False)</div>
 <td>0.730</td>
 <td>0.761</td>
 <td>0.886</td>
-<td>0.098</td>
+<td>0.092</td>
 </tr>
 <tr>
 <th>Logistic Regression</th>
@@ -2142,7 +2142,7 @@ results_df.sort_values('AUC', ascending=False)</div>
 <td>0.743</td>
 <td>0.764</td>
 <td>0.875</td>
-<td>0.016</td>
+<td>0.009</td>
 </tr>
 <tr>
 <th>KNN</th>
@@ -2160,7 +2160,7 @@ results_df.sort_values('AUC', ascending=False)</div>
 <td>0.716</td>
 <td>0.741</td>
 <td>0.871</td>
-<td>0.145</td>
+<td>0.148</td>
 </tr>
 <tr>
 <th>AdaBoost</th>
@@ -2169,7 +2169,7 @@ results_df.sort_values('AUC', ascending=False)</div>
 <td>0.716</td>
 <td>0.736</td>
 <td>0.866</td>
-<td>0.053</td>
+<td>0.050</td>
 </tr>
 <tr>
 <th>Decision Tree</th>
@@ -2178,7 +2178,7 @@ results_df.sort_values('AUC', ascending=False)</div>
 <td>0.743</td>
 <td>0.743</td>
 <td>0.788</td>
-<td>0.004</td>
+<td>0.003</td>
 </tr>
 <tr>
 <th>GaussianNB</th>
@@ -2282,7 +2282,7 @@ model.fit(transformed_train_df, y_train)</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-green-fg">2024-06-09 20:11:18.489</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Select model</span>
+<pre><span class="ansi-green-fg">2024-06-09 22:37:09.152</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Select model</span>
 </pre>
 </div>
 </div>
@@ -2977,7 +2977,7 @@ test.head()</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-green-fg">2024-06-09 20:11:18.741</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Make predictions</span>
+<pre><span class="ansi-green-fg">2024-06-09 22:37:09.382</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Make predictions</span>
 </pre>
 </div>
 </div>
@@ -3094,7 +3094,7 @@ test.head()</div>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="CodeMirror cm-s-jupyter">
 <div class="zeroclipboard-container">
 <clipboard-copy for="cell-13">
@@ -3113,7 +3113,10 @@ test.head()</div>
 <span class="n">test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_final</span> <span class="o">+</span> <span class="s2">"predictions.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>
 
 <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Save results of the different models"</span><span class="p">)</span>
-<span class="n">results_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_final</span> <span class="o">+</span> <span class="s2">"models_metrics.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>
+<span class="n">results_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_final</span> <span class="o">+</span> <span class="s2">"models_metrics.csv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>
+
+<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">"Save results of the best models"</span><span class="p">)</span>
+<span class="n">feature_importance_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">path_final</span> <span class="o">+</span> <span class="s2">"feature_importance_df.csv"</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">','</span><span class="p">)</span>
 </pre></div>
 <div class="clipboard-copy-txt" id="cell-13">logger.info("Save Results")
 
@@ -3121,7 +3124,10 @@ logger.info("Save prediction results")
 test.to_csv(path_final + "predictions.csv", index=False, sep=',')
 
 logger.info("Save results of the different models")
-results_df.to_csv(path_final + "models_metrics.csv", index=False, sep=',')</div>
+results_df.to_csv(path_final + "models_metrics.csv", sep=',')
+
+logger.info("Save results of the best models")
+feature_importance_df.to_csv(path_final + "feature_importance_df.csv", index=False, sep=',')</div>
 </div>
 </div>
 </div>
@@ -3133,9 +3139,10 @@ results_df.to_csv(path_final + "models_metrics.csv", index=False, sep=',')</div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre><span class="ansi-green-fg">2024-06-09 20:11:18.773</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Save Results</span>
-<span class="ansi-green-fg">2024-06-09 20:11:18.774</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">3</span> - <span class="ansi-bold">Save prediction results</span>
-<span class="ansi-green-fg">2024-06-09 20:11:18.777</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">6</span> - <span class="ansi-bold">Save results of the different models</span>
+<pre><span class="ansi-green-fg">2024-06-09 22:41:50.521</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">1</span> - <span class="ansi-bold">Save Results</span>
+<span class="ansi-green-fg">2024-06-09 22:41:50.521</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">3</span> - <span class="ansi-bold">Save prediction results</span>
+<span class="ansi-green-fg">2024-06-09 22:41:50.529</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">6</span> - <span class="ansi-bold">Save results of the different models</span>
+<span class="ansi-green-fg">2024-06-09 22:41:50.531</span> | <span class="ansi-bold">INFO    </span> | <span class="ansi-cyan-fg">__main__</span>:<span class="ansi-cyan-fg">&lt;module&gt;</span>:<span class="ansi-cyan-fg">9</span> - <span class="ansi-bold">Save results of the best models</span>
 </pre>
 </div>
 </div>
