@@ -1,0 +1,6 @@
+pandas
+itables
+great_tables
+plotly
+altair
+scikit-learn
