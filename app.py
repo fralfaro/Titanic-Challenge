@@ -150,7 +150,7 @@ class BodyText:
     """
 
 class ImagesURL:
-    titanic = "https://raw.githubusercontent.com/fralfaro/posit-tables-2024/main/images/titanic.png"
+    titanic = "https://raw.githubusercontent.com/fralfaro/Titanic-Challenge/main/images/titanic.png"
 class DataURL:
     titanic_train = "https://raw.githubusercontent.com/fralfaro/Titanic-Challenge/main/data/raw/train.csv"
     predictions = "https://raw.githubusercontent.com/fralfaro/Titanic-Challenge/main/data/final/predictions.csv"

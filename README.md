@@ -2,6 +2,7 @@
 
 ![example workflow](https://github.com/fralfaro/Titanic-Challenge/actions/workflows/documentation.yml/badge.svg)
 [![documentation](https://img.shields.io/badge/📖-docs-brightgreen)](https://fralfaro.github.io/Titanic-Challenge/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://titanic-challenge-fralfaro.streamlit.app/)
 
 
 <img src="images/titanic.png" width = 500 >
